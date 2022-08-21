@@ -1,0 +1,4 @@
+flask
+pyTelegramBotAPI==4.7.0
+python-dotenv
+waitress

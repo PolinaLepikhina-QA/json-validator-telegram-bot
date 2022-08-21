@@ -1,0 +1,31 @@
+{
+  "env": {
+    "SERVERLESS": "True"
+  },
+  "builds": [
+    {
+      "src": "./api/bot.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/bot",
+      "dest": "/api/bot.py"
+    },
+    {
+      "src": "/api/webhook",
+      "dest": "/api/bot.py"
+    },
+    {
+      "src": "/api",
+      "dest": "/",
+      "status": 308
+    },
+    {
+      "src": "/github",
+      "dest": "https://github.com/PolinaLepikhina-QA/tg-bot-test",
+      "status": 308
+    }
+  ]
+}
