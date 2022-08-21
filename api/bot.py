@@ -9,6 +9,10 @@ UPDATE_WEBHOOK_PATH = "/api/webhook"
 
 app = flask.Flask(__name__)
 
+@app.route("/", methods=['GET'])
+def home():
+    return 'Telegram bot start page'
+
 # Process webhook calls
 @app.route(WEBHOOK_URL_PATH, methods=['POST'])
 def webhook():

@@ -10,6 +10,10 @@
   ],
   "routes": [
     {
+      "src": "/",
+      "dest": "/api/bot.py"
+    },
+    {
       "src": "/api/bot",
       "dest": "/api/bot.py"
     },
