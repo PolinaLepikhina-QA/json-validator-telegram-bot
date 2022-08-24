@@ -40,7 +40,7 @@ def message_handler(message: types.Message):
 			parse_mode = "HTML"
 		)
 		return
-	text = json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False)
+	text = json.dumps(payload, indent=2, sort_keys=False, ensure_ascii=False)
 	bot.send_message(
 		chat_id=message.chat.id,
 		text=f'JSON:\n<code>{text}</code>',
